@@ -35,8 +35,12 @@ v2rayInstaller(){
 	echo -e "\n 2. WebSocket模式"
 	read -p "请输入你想要使用的代理方式:" aMethod
 	case ${aMethod} in
-	  1 ) ./kcp.sh;;
-	  2 ) ./websocks.sh;;
+	  1 ) 
+		wget https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/kcp.sh ;
+		./kcp.sh;;
+	  2 ) 
+		wget https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/websocks.sh ;
+		./websocks.sh;;
 	  * ) echo -e "\n 请输入 1 或者 2 \n" ;;
 	esac
   done
