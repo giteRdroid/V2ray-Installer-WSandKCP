@@ -5,7 +5,7 @@
 
 ## 使用方法:
 运行以下命令安装
-`bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/install.sh)`
+    bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/install.sh)
 
 本脚本仅支持服务器端搭建，客户端请另外修改配置文件。
 
@@ -23,7 +23,7 @@ This script made from Uncle Dong's script,but it had been modified,it can build 
 
 ## Install
 Please use this command
-`bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/install.sh)`
+    bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/install.sh)
 
 this script can only build for server,you can fill the configuration in your client application
 
