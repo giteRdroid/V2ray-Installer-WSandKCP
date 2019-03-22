@@ -98,6 +98,7 @@ pathwebGet(){
 messageOutput(){
 	messOut="
 	安装完成，请到v2rayNG或者v2rayN填入下面的信息
+	配置信息位置：/root/v2raymessage/ws.txt
 	————————————————————————————————————————————————
 	别名(remarks)：ws
 	地址(address)：${domainName}
@@ -120,8 +121,8 @@ endInstall(){
 	systemctl enable caddy
   	systemctl restart caddy
 	mkdir /root/v2raymessage/	
-	touch /root/v2raymessage/kcp.txt
-	echo "${messOut}" > /root/v2raymessage/kcp.txt
+	touch /root/v2raymessage/ws.txt
+	echo "${messOut}" > /root/v2raymessage/ws.txt
 	echo "${messOut}"
 	exit
 }

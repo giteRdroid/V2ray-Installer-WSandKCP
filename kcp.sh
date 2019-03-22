@@ -53,6 +53,7 @@ uuidGet(){
 messageOutput(){
 	messOut="
 	安装完成，请到v2rayNG或者v2rayN填入下面的信息
+	配置信息位置：/root/v2raymessage/kcp.txt
 	————————————————————————————————————————————————
 	别名(remarks)：kcp
 	地址(address)：${ipGet}
