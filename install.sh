@@ -27,9 +27,9 @@ prepareInstall(){
 }
 
 v2rayInstaller(){
-  echo -e "\n ===== 安装v2ray ===== \n"
-  bash <(curl -L -s https://install.direct/go.sh)
-  while true; do
+  	echo -e "\n ===== 安装v2ray ===== \n"
+  	bash <(curl -L -s https://install.direct/go.sh)
+  	while true; do
 	echo "支持安装的代理方式:" 
 	echo -e "\n 1. KCP模式"
 	echo -e "\n 2. WebSocket模式"
