@@ -26,10 +26,10 @@ userInput(){
 }
 
 firewalldOpen(){
-  firewall-cmd --permanent --add-port=${port}/tcp --add-port=${port}/udp
-  firewall-cmd --reload
+  	firewall-cmd --permanent --add-port=${port}/tcp --add-port=${port}/udp
+  	firewall-cmd --reload
 	systemctl start firewalld
-  echo "${port}端口已经放行"
+  	echo "${port}端口已经放行"
 }
 
 portGet(){
@@ -70,8 +70,8 @@ messageOutput(){
 }
 
 endInstall(){
-  systemctl enable v2ray
-  systemctl restart v2ray	
+  	systemctl enable v2ray
+  	systemctl restart v2ray	
 	mkdir /root/v2raymessage/
 	touch /root/v2raymessage/kcp.txt
 	echo "${messOut}" > /root/v2raymessage/kcp.txt
