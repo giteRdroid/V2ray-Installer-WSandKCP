@@ -77,7 +77,6 @@ endInstall(){
 	touch /root/v2raymessage/kcp.txt
 	echo "${messOut}" > /root/v2raymessage/kcp.txt
 	echo "${messOut}"
-	exit
 }
 
 kcpInstaller

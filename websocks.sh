@@ -14,10 +14,10 @@ ws代理方式是直接用Caddy+V2ray的方式进行反向代理，要注意以�
 
 prepareInstall(){
 	useTips
-	read -p "确认使用ws代理? [Y/n]" -n 1 yN
+	read -p "确认使用ws代理? [Y/n]" yN
 	case ${yN} in 
     		[yY]* ) echo -e "\n 确定安装 \n "; wsInstall; break;;
-  		[nN]* ) echo -e "\n 退出安装 \n"; exit;;
+  		[nN]* ) echo -e "\n 退出安装 \n"; exit 0;;
 	esac
 }
 
@@ -48,7 +48,7 @@ getCaddyconfig(){
 
 caddyInstaller(){
  	echo -e "\n ===== 安装caddy ===== \n"
-  	yum install caddy
+  	yum install caddy -y
 }
 
 userInput(){
@@ -98,8 +98,8 @@ pathwebGet(){
 
 webSite(){
 	wget https://github.com/Rickdroid/V2ray-Installer-WSandKCP/raw/master/web/web.zip
-	mkdir -p ${pathWebsite}
-	unzip -d ${pathWebsite} web.zip
+	mkdir -p "${pathWebsite}"
+	unzip -d "${pathWebsite}" web.zip
 	rm -rf web.zip
 }
 
@@ -128,7 +128,7 @@ endInstall(){
   	systemctl restart v2ray	
 	systemctl enable caddy
   	systemctl restart caddy
-	mkdir /root/v2raymessage/	
+	mkdir -p /root/v2raymessage/	
 	touch /root/v2raymessage/ws.txt
 	echo "${messOut}" > /root/v2raymessage/ws.txt
 	echo "${messOut}"
