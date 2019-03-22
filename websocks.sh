@@ -22,11 +22,11 @@ prepareInstall(){
 }
 
 wsInstall(){
-	caddyInstaller
-	webSite
+	caddyInstaller	
 	getV2config
 	getCaddyconfig
 	userInput
+	webSite
 	firewalldOpen	
 	messageOutput
 	endInstall
