@@ -23,10 +23,11 @@ prepareInstall(){
 
 wsInstall(){
 	caddyInstaller
+	webSite
 	getV2config
 	getCaddyconfig
 	userInput
-	firewalldOpen
+	firewalldOpen	
 	messageOutput
 	endInstall
 }
@@ -93,6 +94,12 @@ uuidGet(){
 
 pathwebGet(){
 	sed -i "s#/cadd2ray#${pathAgent}#g" /etc/v2ray/config.json
+}
+
+webSite(){
+	wget https://github.com/Rickdroid/V2ray-Installer-WSandKCP/raw/master/web/web.zip
+	unzip -d ${pathWebsite} web.zip
+	rm -rf web.zip
 }
 
 messageOutput(){
