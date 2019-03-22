@@ -2,13 +2,13 @@
 
 beginnIng="
         ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
-				                         V2ray安装
+				V2ray安装
 				
         此脚本用于安装V2ray的kcp模式或者WebSocket反代模式
 				
         此脚本只适用CentOS和Fedora。
 				
-				运行脚本前先确保当前是最高权限状态，否则先运行sudo su
+	运行脚本前先确保当前是最高权限状态，否则先运行sudo su
 
         ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
         输入 Y 继续安装，输入 n 退出安装，或者按 Ctrl + C 结束。
@@ -27,9 +27,9 @@ prepareInstall(){
 }
 
 v2rayInstaller(){
-  echo -e "\n ===== 安装v2ray ===== \n"
-  bash <(curl -L -s https://install.direct/go.sh)
-  while true; do
+  	echo -e "\n ===== 安装v2ray ===== \n"
+  	bash <(curl -L -s https://install.direct/go.sh)
+  	while true; do
 	echo "支持安装的代理方式:" 
 	echo -e "\n 1. KCP模式"
 	echo -e "\n 2. WebSocket模式"

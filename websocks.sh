@@ -15,9 +15,9 @@ ws代理方式是直接用Caddy+V2ray的方式进行反向代理，要注意以�
 prepareInstall(){
 	useTips
 	read -p "确认使用ws代理? [Y/n]" -n 1 yN
-  case ${yN} in 
-    [yY]* ) echo -e "\n 确定安装 \n "; wsInstall; break;;
-    [nN]* ) echo -e "\n 退出安装 \n"; exit;;
+	case ${yN} in 
+    		[yY]* ) echo -e "\n 确定安装 \n "; wsInstall; break;;
+  		[nN]* ) echo -e "\n 退出安装 \n"; exit;;
 	esac
 }
 
@@ -46,13 +46,13 @@ getCaddyconfig(){
 }
 
 caddyInstaller(){
-  echo -e "\n ===== 安装caddy ===== \n"
-  yum install caddy
+ 	echo -e "\n ===== 安装caddy ===== \n"
+  	yum install caddy
 }
 
 userInput(){
-  read -p "输入你要使用的域名:" domainName
-  read -p "输入使用的path(请注意前面要输入\"/\"):" pathAgent
+  	read -p "输入你要使用的域名:" domainName
+  	read -p "输入使用的path(请注意前面要输入\"/\"):" pathAgent
 	read -p "输入网站的根目录(即站点路径),(请注意前面要输入\"/\"):" pathWebsite
 	caddyGet
 	read -p "输入alterID(可不填，不填默认16):" alterID
@@ -64,10 +64,10 @@ userInput(){
 }
 
 firewalldOpen(){
-  firewall-cmd --permanent --add-service=http --add-service=https
-  firewall-cmd --reload
+  	firewall-cmd --permanent --add-service=http --add-service=https
+  	firewall-cmd --reload
 	systemctl start firewalld
-  echo "${port}端口已经放行"
+  	echo "${port}端口已经放行"
 }
 
 caddyGet(){
@@ -115,10 +115,10 @@ messageOutput(){
 }
 
 endInstall(){
-  systemctl enable v2ray
-  systemctl restart v2ray	
+  	systemctl enable v2ray
+  	systemctl restart v2ray	
 	systemctl enable caddy
-  systemctl restart caddy
+  	systemctl restart caddy
 	mkdir /root/v2raymessage/	
 	touch /root/v2raymessage/kcp.txt
 	echo "${messOut}" > /root/v2raymessage/kcp.txt
