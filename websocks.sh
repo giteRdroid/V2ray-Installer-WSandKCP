@@ -34,14 +34,14 @@ wsInstall(){
 getV2config(){
 	cd /etc/v2ray
 	rm -rf /etc/v2ray/config.json
-	wget https://raw.githubusercontent.com/Rickdroid/V2rayConfig/master/config-ws%2Btls%2Bcdn.json
+	wget https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/Config/config-ws%2Btls%2Bcdn.json
 	mv /etc/v2ray/config-ws+tls+cdn.json /etc/v2ray/config.json 
 }
 
 getCaddyconfig(){
 	cd /etc/caddy
 	rm -rf caddy.conf
-	wget https://raw.githubusercontent.com/Rickdroid/V2rayConfig/master/caddy-ws.conf
+	wget https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/Config/caddy-ws.conf
 	mv /etc/caddy/caddy-ws.conf /etc/caddy/caddy.conf 
 }
 

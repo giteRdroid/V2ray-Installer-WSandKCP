@@ -11,7 +11,7 @@ kcpInstaller(){
 getConfig(){
 	cd /etc/v2ray
 	rm -rf /etc/v2ray/config.json
-	wget https://raw.githubusercontent.com/Rickdroid/V2rayConfig/master/config-mkcp.json
+	wget https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/Config/config-mkcp.json
 	mv /etc/v2ray/config-mkcp.json /etc/v2ray/config.json 
 }
 
