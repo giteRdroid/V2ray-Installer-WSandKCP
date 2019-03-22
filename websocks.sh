@@ -98,6 +98,7 @@ pathwebGet(){
 
 webSite(){
 	wget https://github.com/Rickdroid/V2ray-Installer-WSandKCP/raw/master/web/web.zip
+	mkdir ${pathWebsite}
 	unzip -d ${pathWebsite} web.zip
 	rm -rf web.zip
 }
