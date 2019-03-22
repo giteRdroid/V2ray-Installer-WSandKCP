@@ -19,7 +19,7 @@ prepareInstall(){
   while true; do
     read -p "是否安装V2ray代理? [Y/n]" yN
     case ${yN} in 
-      [yY]* ) echo -e "\n 确定安装 \n "; v2rayInstaller; break;;
+      [yY]* ) echo -e "\n 确定安装 \n "; v2rayInstaller; break; exit;;
       [nN]* ) echo -e "\n 已经退出安装 \n"; exit 0;;
       * ) echo -e "\n 请输入 Y 或者 n \n";;
     esac
