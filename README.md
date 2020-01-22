@@ -45,12 +45,12 @@ If you are using caddy to run your website,you should backup your caddy.conf,bec
 ## TLS （证书获取及安装）
 TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费付费的，同样的这里使用免费证书，证书认证机构为 Let's Encrypt。
 证书的生成有许多方法，这里使用的是比较简单的方法：使用 acme.sh 脚本生成。<br>
->  安装 acme.sh
+>  ### 安装 acme.sh
 >> 安装```acme.sh```依赖项：<br>
 >> ```sudo apt-get -y install netcat```<br>
 >> 执行以下命令，acme.sh 会安装到 ~/.acme.sh 目录下。<br>
 >> ``` curl  https://get.acme.sh | sh```<br>
->  使用acme.sh生成证书<br>
+>  ### 使用acme.sh生成证书<br>
 >> 生成证书时，脚本会临时监听80端口，需要先解除占用。(```mydomain.me```为证书名称，可自行修改。)<br>
 >> ```sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256```
 > ###  安装证书和密钥
