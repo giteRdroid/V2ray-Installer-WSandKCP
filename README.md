@@ -17,7 +17,6 @@ If you use WebSocks,you should made your domain available before you install
 If you are using caddy to run your website,you should backup your caddy.conf,because this script will lose your configuration
 
 ----
-----
 
 # V2ray-Installer-WSandKCP Chinese
 本脚本基于栋叔的脚本制作而来，魔改了原来的脚本内容，实现快速搭建基于KCP或者WebSocks代理梯子
@@ -39,9 +38,11 @@ If you are using caddy to run your website,you should backup your caddy.conf,bec
 脚本比较简陋，仅适合个人使用，以后有机会有精力有时间有条件再慢慢完善。
 
 ----
+----
 
 # V2ray-Installer-WS and KCP about Nginx Chinese
 以上脚本及相关由小R酱收集制作，下面主要用于记录如何使用`Nginx`作为WebService。实现WebSocket+TLS+Nginx搭建梯子。
+如果有问题和其他不足欢迎指出。——小H酱
 
 ## TLS （证书获取及安装）
 TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费付费的，同样的这里使用免费证书，证书认证机构为 Let's Encrypt。
