@@ -40,21 +40,21 @@ If you are using caddy to run your website,you should backup your caddy.conf,bec
 ----
 
 # V2ray-Installer-WS and KCP about Nginx Chinese
-以上脚本及相关由小R酱收集制作，下面主要用于记录如何使用```Nginx```作为WebService。实现WebSocket+TLS+Nginx搭建梯子。
+以上脚本及相关由小R酱收集制作，下面主要用于记录如何使用`Nginx`作为WebService。实现WebSocket+TLS+Nginx搭建梯子。
 
 ## TLS （证书获取及安装）
 TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费付费的，同样的这里使用免费证书，证书认证机构为 Let's Encrypt。
 证书的生成有许多方法，这里使用的是比较简单的方法：使用 acme.sh 脚本生成。<br>
 >  ### 安装 acme.sh
->> 安装```acme.sh```依赖项：<br>
+>> 安装`acme.sh`依赖项：<br>
 >> ```sudo apt-get -y install netcat```<br>
 >> 执行以下命令，acme.sh 会安装到 ~/.acme.sh 目录下。<br>
 >> ``` curl  https://get.acme.sh | sh```<br>
 >  ### 使用acme.sh生成证书<br>
->> 生成证书时，脚本会临时监听80端口，需要先解除占用。(```mydomain.me```为证书名称，可自行修改。)<br>
+>> 生成证书时，脚本会临时监听80端口，需要先解除占用。(`mydomain.me`为证书名称，可自行修改。)<br>
 >> ```sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256```
 > ###  安装证书和密钥
->> 将证书和密钥安装到 ```/etc/v2ray``` 中：<br>
+>> 将证书和密钥安装到 `/etc/v2ray` 中：<br>
 >> * ECC 证书：
 >> ```sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc```<br>
 >> * RSA 证书：
@@ -62,7 +62,7 @@ TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费�
 > （PS：无论什么情况，密钥(即上面的v2ray.key)都不能泄漏，如果你不幸泄漏了密钥，可以使用 acme.sh 将原证书吊销，再生成新的证书，吊销方法请自行参考 acme.sh 的手册）<br>
 
 ## Nginx配置
-懒得写脚本了，亲，请自行在```nginx.conf```中添加以下代码（按自己需要修改即可）：
+懒得写脚本了，亲，请自行在`nginx.conf`中添加以下代码（按自己需要修改即可）：
 ```
 server {
   listen 443 ssl;
