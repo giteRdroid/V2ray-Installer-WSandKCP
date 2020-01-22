@@ -57,9 +57,9 @@ TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费�
 > ###  安装证书和密钥
 >> 将证书和密钥安装到 `/etc/v2ray` 中：<br>
 >> * ECC 证书：	
->> ```sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc```
+>>> ```sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc```
 >> * RSA 证书：	
->> ```sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key```
+>>> ```sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key```
 > （PS：无论什么情况，密钥(即上面的v2ray.key)都不能泄漏，如果你不幸泄漏了密钥，可以使用 acme.sh 将原证书吊销，再生成新的证书，吊销方法请自行参考 acme.sh 的手册）<br>
 
 ## Nginx配置
