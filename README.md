@@ -48,7 +48,8 @@ TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费�
 >  ### 安装 acme.sh
 >> 安装`acme.sh`依赖项：<br>
 >> ```sudo apt-get -y install netcat```<br>
->> 执行以下命令，acme.sh 会安装到 ~/.acme.sh 目录下。<br>
+
+>> 执行以下命令，`acme.sh` 会安装到 `~/.acme.sh` 目录下。<br>
 >> ``` curl  https://get.acme.sh | sh```<br>
 >  ### 使用acme.sh生成证书<br>
 >> 生成证书时，脚本会临时监听80端口，需要先解除占用。(`mydomain.me`为证书名称，可自行修改。)<br>
