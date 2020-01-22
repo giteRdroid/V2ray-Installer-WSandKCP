@@ -17,6 +17,7 @@ If you use WebSocks,you should made your domain available before you install
 If you are using caddy to run your website,you should backup your caddy.conf,because this script will lose your configuration
 
 ----
+----
 
 # V2ray-Installer-WSandKCP Chinese
 本脚本基于栋叔的脚本制作而来，魔改了原来的脚本内容，实现快速搭建基于KCP或者WebSocks代理梯子
