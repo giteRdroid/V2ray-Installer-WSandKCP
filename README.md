@@ -89,3 +89,6 @@ server {
     }
 }
 ```
+## 相关扩展
+* 新 V2Ray 白话文指南：```https://guide.v2fly.org/```
+* V2ray相关问题：```https://www.v2ray.com/```
