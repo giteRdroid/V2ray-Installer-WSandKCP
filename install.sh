@@ -36,9 +36,9 @@ v2rayInstaller(){
 		read -p "请输入你想要使用的代理方式:" aMethod
 		case ${aMethod} in
 			1 ) 
-			bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/kcp.sh) ;;
+			bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/kcp.sh); break; exit 0;;
 			2 ) 
-			bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/websocks.sh) ;;
+			bash <(curl -L -s https://raw.githubusercontent.com/Rickdroid/V2ray-Installer-WSandKCP/master/websocks.sh); break; exit 0;;
 			* ) echo -e "\n 请输入 1 或者 2 \n" ;;
 		esac
   done
