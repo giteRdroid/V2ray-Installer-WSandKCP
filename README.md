@@ -17,9 +17,11 @@ If you use WebSocks,you should made your domain available before you install
 If you are using caddy to run your website,you should backup your caddy.conf,because this script will lose your configuration
 
 Please check your Server whether can find caddy with 'yum' before you install v2ray for ws.
+
 ``yum list caddy``
 
 If yum can't find caddy, you should use this command to install 'epel' repositorie.
+
 ``yum install epel-release``
 
 ----
@@ -42,9 +44,11 @@ If yum can't find caddy, you should use this command to install 'epel' repositor
 如果你在使用caddy建站，那么请先备份保存以下自己caddy的配置文件，工具安装过程原站点配置信息100%丢失
 
 如果要使用ws的方式，请使用脚本前先确认是否能yum查找到caddy
+
 ``yum list caddy``
 
 如果没有，请先运行以下命令：
+
 ``yum install epel-release``
 
 脚本比较简陋，仅适合个人使用，以后有机会有精力有时间有条件再慢慢完善。
